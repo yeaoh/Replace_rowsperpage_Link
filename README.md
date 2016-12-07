@@ -1,0 +1,2 @@
+# Replace_rowsperpage_Link
+Salesforceの増やすリンクの件数を書き換えるChrome拡張
