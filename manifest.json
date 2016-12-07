@@ -1,0 +1,32 @@
+{
+	"name" : "Replace rowsperpage Link",
+	"version" : "1.0.0",
+	"manifest_version" : 2,
+	"description" : "Salesforce.comのApexクラス、Visualforceページなどの画面にある「▼増やす」リンクのクリック時の表示件数を書き換えます。",
+	"icons" : {
+		"16" : "./icon/icon16.png",
+		"48" : "./icon/icon48.png",
+		"128" : "./icon/icon128.png"
+	},
+	"options_ui" : {
+		"page" : "options.html",
+		"chrome_style" : true,
+		"open_in_tab" : false
+	},
+	"page_action": {
+		"default_icon": {
+			"16" : "./icon/icon16.png"
+		},
+		"default_title": "Replace rowsperpage Link"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*.salesforce.com/*"],
+			"js": ["./lib/jquery-3.1.1.min.js", "main.js"],
+			"run_at": "document_end"
+		}
+	],
+	"permissions" : [
+		"storage"
+	]
+}
